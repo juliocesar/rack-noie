@@ -3,10 +3,6 @@
 rack-noie is the coolest rack middleware ever created. And it is so because it does _everyone_
 a favor: it shows the way out of your website to poor souls out there using Internet Explorer 6.
 
-I don't wanna hear excuses. IE6 stinks. If we keep developing software that plays well with it,
-they'll come up with yet more crap (read: IE7, although a little bit less bad than IE6), until
-Microsoft single-handedly manages to hold us back for a few more years.
-
 # usage
 
 just 
@@ -28,7 +24,7 @@ or let the default kick in
     
 # disclaimer
 
-I'm a nice guy. I'm so nice that the default URL points to Microsoft's IE7 upgrade page.
+I'm a nice guy. I'm so nice that the default URL points to Microsoft's IE8 upgrade page.
 
 # license
 

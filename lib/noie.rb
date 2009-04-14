@@ -2,8 +2,7 @@ class NoIE
   def initialize(app, options = {})
     @app = app
     @options = options
-    # Defaults to a slighly less of an excuse that passes for a browser
-    @options[:redirect] ||= 'http://www.microsoft.com/windows/downloads/ie/getitnow.mspx'
+    @options[:redirect] ||= 'http://www.microsoft.com/windows/internet-explorer/default.aspx'
   end
   
   def call(env)

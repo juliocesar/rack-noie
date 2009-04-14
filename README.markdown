@@ -1,31 +1,42 @@
-# rack-noie
+# rack-noie6
 
-rack-noie is the coolest rack middleware ever created. And it is so because it does _everyone_
-a favor: it shows the way out of your website to poor souls out there using Internet Explorer 6.
+rack-noie6 does _everyone_ a favor: it shows the way out of your website to poor souls out there using Internet Explorer 6.
 
-# usage
+Originally developed by [juliocesar](http://github.com/juliocesar). I forked and gemified for easier distribution.
+
+# general usage
 
 just 
 
-    require 'noie' # or 'juliocesar-noie' when i gemify it
+    gem install sant0sk1-rack-noie6 --source http://gems.github.com
+    require 'noie6'
     
 and
 
-    use NoIE, :redirect => '/noieplease.html'
+    use Rack::NoIE6, :redirect => '/noieplease.html'
     
 the above will redirect to a page noieplease.html in your website. You can redirect to
 a URL as well, like so
 
-    use NoIE, :redirect => 'http://slashdot.org'
+    use Rack::NoIE6, :redirect => 'http://slashdot.org'
     
 or let the default kick in
 
-    use NoIE
+    use Rack::NoIE6
+    
+# Rails usage
+
+inside environment.rb's Rails::Initializer.run
+
+    config.gem 'sant0sk1-rack-noie6', :lib => 'noie6'
+    config.middleware.use "Rack::NoIE6"
+    
+Piece o' cake!
     
 # disclaimer
 
-I'm a nice guy. I'm so nice that the default URL points to Microsoft's IE8 upgrade page.
+The default URL points to Microsoft's IE8 upgrade page.
 
 # license
 
-MIT, as usual.
+MIT

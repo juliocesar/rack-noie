@@ -12,7 +12,9 @@ module Rack
 
     private
     def ie6_found_in?(env)
-      env['HTTP_USER_AGENT'][/MSIE 6.0/] and @options[:redirect] != env['PATH_INFO']
+      if env['HTTP_USER_AGENT']
+        env['HTTP_USER_AGENT'][/MSIE 6.0/] and @options[:redirect] != env['PATH_INFO']
+      end
     end
 
     def kick_it

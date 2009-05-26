@@ -24,6 +24,10 @@ or let the default kick in
 
     use Rack::NoIE6
     
+You can even specify a minimum version of IE like so
+
+use Rack::NoIE6, :redirect => 'http://slashdot.org', :minimum => 6.0
+    
 # Rails usage
 
 inside environment.rb's Rails::Initializer.run

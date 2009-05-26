@@ -4,6 +4,7 @@ module Rack
       @app = app
       @options = options
       @options[:redirect] ||= 'http://www.microsoft.com/windows/internet-explorer/default.aspx'
+      @options[:minimum] ||= 7.0
     end
 
     def call(env)
@@ -13,8 +14,17 @@ module Rack
     private
     def ie6_found_in?(env)
       if env['HTTP_USER_AGENT']
-        env['HTTP_USER_AGENT'][/MSIE 6.0/] and @options[:redirect] != env['PATH_INFO']
+        is_ie?(env['HTTP_USER_AGENT']) and ie_version(env['HTTP_USER_AGENT']) < @options[:minimum] and @options[:redirect] != env['PATH_INFO']
       end
+    end
+    
+    def is_ie?(ua_string)
+      # We need at least one digit to be able to get the version, hence the \d
+      ua_string.match(/MSIE \d/) ? true : false
+    end
+    
+    def ie_version(ua_string)
+      ua_string.match(/MSIE (\S+)/)[1].to_f
     end
 
     def kick_it

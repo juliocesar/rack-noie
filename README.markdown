@@ -1,14 +1,14 @@
 # rack-noie6
 
-rack-noie6 does _everyone_ a favor: it shows the way out of your website to poor souls out there using Internet Explorer 6 (or a user configurable minimum).
+rack-noie6 does _everyone_ a favor: it shows the way out of your website to poor souls out there using Internet Explorer 6.
 
-Originally developed by [juliocesar](http://github.com/juliocesar), [sant0sk1](http://github.com/sant0sk1) forked and gemified for easier distribution and [I](http://github.com/wjessop) added the minimum version option.
+Originally developed by [juliocesar](http://github.com/juliocesar). I forked and gemified for easier distribution.
 
 # general usage
 
 just 
 
-    gem install wjessop-rack-noie6 --source http://gems.github.com
+    gem install sant0sk1-rack-noie6 --source http://gems.github.com
     require 'noie6'
     
 and
@@ -32,7 +32,7 @@ You can even specify a minimum version of IE like so
 
 inside environment.rb's Rails::Initializer.run
 
-    config.gem 'wjessop-rack-noie6', :lib => 'noie6'
+    config.gem 'sant0sk1-rack-noie6', :lib => 'noie6'
     config.middleware.use "Rack::NoIE6"
     
 Piece o' cake!

@@ -19,13 +19,13 @@ Gem::Specification.new do |s|
     "test/noie_test.rb"
   ]
   s.has_rdoc = true
-  s.homepage = %q{http://github.com/sant0sk1/rack-noie6}
+  s.homepage = %q{http://github.com/juliocesar/rack-noie}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.1}
   s.summary = %q{A Rack middleware to redirect IE6 users out of your website}
   s.test_files = [
-    "test/noie6_test.rb"
+    "test/noie_test.rb"
   ]
 
   if s.respond_to? :specification_version then

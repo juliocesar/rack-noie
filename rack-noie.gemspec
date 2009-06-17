@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{rack-noie6}
-  s.version = "1.0.1"
+  s.name = %q{rack-noie}
+  s.version = "1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jerod Santo", "Julio Cesar Ody"]
+  s.authors = ["Julio Cesar Ody"]
   s.date = %q{2009-05-11}
-  s.email = %q{jerod.santo@gmail.com}
+  s.email = %q{julioody@gmail.com}
   s.extra_rdoc_files = [
     "README.markdown"
   ]
@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
     "README.markdown",
     "Rakefile",
     "VERSION.yml",
-    "lib/noie6.rb",
-    "test/noie6_test.rb"
+    "lib/noie.rb",
+    "test/noie_test.rb"
   ]
   s.has_rdoc = true
   s.homepage = %q{http://github.com/sant0sk1/rack-noie6}

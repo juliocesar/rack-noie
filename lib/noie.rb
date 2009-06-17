@@ -1,5 +1,5 @@
 module Rack
-  class NoIE6
+  class NoIE
     def initialize(app, options = {})
       @app = app
       @options = options
@@ -8,11 +8,11 @@ module Rack
     end
 
     def call(env)
-      ie6_found_in?(env) ? kick_it : @app.call(env)    
+      ie_found_in?(env) ? kick_it : @app.call(env)    
     end
 
     private
-    def ie6_found_in?(env)
+    def ie_found_in?(env)
       if env['HTTP_USER_AGENT']
         is_ie?(env['HTTP_USER_AGENT']) and ie_version(env['HTTP_USER_AGENT']) < @options[:minimum] and @options[:redirect] != env['PATH_INFO']
       end

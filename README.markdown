@@ -3,11 +3,15 @@
 rack-noie is the coolest rack middleware ever created. And it is so because it does _everyone_
 a favor: it shows the way out of your website to poor souls out there using Internet Explorer 6.
 
+# installation
+
+    sudo gem install rack-noie -s http://gemcutter.org
+
 # usage
 
 just 
 
-    require 'noie' # or 'juliocesar-noie' when i gemify it
+    require 'noie'
     
 and
 

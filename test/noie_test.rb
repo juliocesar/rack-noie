@@ -7,7 +7,7 @@ require File.join(File.dirname(__FILE__), '..', 'lib', 'noie')
 
 class TestApp
   def call(env)
-    [200, {}, 'Hi Internets!']
+    [200, {}, ['Hi Internets!']]
   end
 end
 

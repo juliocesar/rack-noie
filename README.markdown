@@ -5,15 +5,38 @@ a favor: it shows the way out of your website to poor souls out there using Inte
 
 # installation
 
-    sudo gem install rack-noie -s http://gemcutter.org
+Add to your Gemfile
 
-# usage
+```
+gem "rack-noie", :require => "noie"
+```
 
-just 
+# Rails Usage
 
-    require 'noie'
-    
-and
+Add to your config/application.rb
+
+```
+config.middleware.use Rack::NoIE
+```
+
+By default, this will redirect IE6 (and below) to [MS's upgrade site](http://www.microsoft.com/windows/internet-explorer/default.aspx)
+
+### No IE-8
+
+For an updated slant (only let IE9 in):
+
+```
+config.middleware.use Rack::NoIE, {:redirect => "http://ie8nomore.com/", 
+                                   :minimum => 9}
+```
+
+### No IE FOREVS
+```
+config.middleware.use Rack::NoIE, {:redirect => "/why-i-dont-support-ie.html", 
+                                   :minimum => 29}
+```
+
+# Rack / Sinatra usage
 
     use Rack::NoIE, :redirect => '/noieplease.html'
     

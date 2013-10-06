@@ -1,3 +1,9 @@
+# Note
+
+**This project is no longer maintained**. It was written during darker days of the web, when handling the issues
+that prompted it's existence was very time consuming. Refer to client-side techniques for graceful degradation.
+
+
 # rack-noie
 
 rack-noie is the coolest rack middleware ever created. And it is so because it does _everyone_
